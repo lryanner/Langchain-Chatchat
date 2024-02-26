@@ -1,4 +1,9 @@
 import os
+from google.colab import userdata
+
+
+OPENAI_KEY=userdata.get('openaikey')
+OPENAI_BASE=userdata.get('openaibase')
 
 # 可以指定一个绝对路径，统一存放所有的Embedding和LLM模型。
 # 每个模型可以是一个单独的目录，也可以是某个目录下的二级子目录。
@@ -41,8 +46,8 @@ TEMPERATURE = 0.7
 ONLINE_LLM_MODEL = {
     "openai-api": {
         "model_name": "gpt-4-0125-preview",
-        "api_base_url": "https://api.openai.com/v1",
-        "api_key": "",
+        "api_base_url": OPENAI_BASE,
+        "api_key": OPENAI_KEY,
         "openai_proxy": "",
     },
 
