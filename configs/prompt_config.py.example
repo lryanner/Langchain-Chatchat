@@ -48,6 +48,11 @@ PROMPT_TEMPLATES = {
             '<已知信息>{{ context }}</已知信息>\n'
             '<问题>{{ question }}</问题>\n',
 
+        "english_prompt":
+            '<Instruction> Answer the question concisely and professionally based on the known information. If the answer cannot be derived from it, say "Unable to answer the question based on the information provided" or "Unknown based on the information provided." Answer in Chinese if I ask in Chinese, and in English if I ask in English. </Instruction>\n'
+            '<Known Information>{{ context }}</Known Information>\n'
+            '<Question>{{ question }}</Question>\n',
+
         "empty":  # 搜不到知识库的时候使用
             '请你回答我的问题，如果我用中文提问，请用中文回答，如果我用英文提问，请用英文回答:\n'
             '{{ question }}\n\n',
